@@ -1,0 +1,69 @@
+header{
+    background-color: #85C8FF;
+    padding: 20px;
+
+}
+#escuela{
+    text-align: left;
+    font-size: 30px;
+    font-family: Gabriela;
+}
+body{
+    margin: 0;
+    background-color: #A5D7FF;
+}
+@font-face {
+    font-family: Gabriela;
+    src: url(Gabriela-Regular.ttf);
+}
+@font-face {
+    font-family: Inria Sans;
+    src: url(InriaSans-Regular.ttf);
+}
+@font-face {
+    font-family: Joan;
+    src: url(Joan-Regular.ttf);
+}
+h1{
+    font-family: Joan;
+}
+h2{
+    font-family: Inria Sans;
+}
+#papa{
+    display: inline-block;
+    width: 100%;
+}
+#buscador{
+    float: left;
+    width: 40%;
+    text-align: center;
+}
+#mapa{
+    float: right;
+    width: 60%;
+    text-align: center;
+}
+#img-mapa{
+    width: 80%;
+}
+
+#barra_busqueda{
+    display: flex;
+    width: 80%;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 10%;
+}
+#texto_busqueda{
+    float: center;
+    width: 80%;
+    font-size: 140%;
+}
+#img-lupa{
+    width: 40px;
+    height: 40px;
+    background-image: url('lupa.jpg');
+    background-size: cover;
+}
