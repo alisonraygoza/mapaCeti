@@ -18,8 +18,8 @@
             background-color: #475268;
            }
            #mapa{
-            width: 700;
-            height: 400;
+            width: 75%;
+            height: auto;
            }
            .footer{
                 background-color:#475268;
@@ -36,22 +36,20 @@
         </style>
     </head>
     <body>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div id="Titulo" class="col p-4">
+                <div id="Titulo" class="col-12 col-md-6 p-4 text-center">
                     <h1>Mapa libre</h1>
                 </div>
             </div>
-            <div class="row">
-                <div id="mapa2" class="col">
+            <div class="clearfix">
+                <div id="mapa2" class="col-12 col-md-6 p-0">
                     <img src="mapa.png" class="img-fluid" id="mapa">
                 </div>
             </div>
-            <div class="row">
-                <div class="col footer p-5">
-                    <h6>Esta página no es una oficial del Centro de Enseñanza Técnica Industrial. Esta página tiene fines informativos</h6>
-                </div>
-            </div>
+        </div>
+        <div class="col-12 footer  text-center">
+            <h6>Esta página no es una oficial del Centro de Enseñanza Técnica Industrial. Esta página tiene fines informativos</h6>
         </div>
     </body>
 </html>
