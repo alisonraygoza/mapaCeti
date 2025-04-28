@@ -3,25 +3,98 @@
     <meta charset="utf-8">
     <head>
         <title>Mapa digital</title>
-        <link rel="stylesheet" href="styles.css">
     </head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                background-color: #a6c7ca;
+                background-image: url(ceti.png);
+                background-size: 600px; 
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100vh;
+            }
+            .titulo{
+                background-color:#475268;
+                color: #a6c7ca;
+            }
+            #papa{
+                text-align: center;
+            }
+            #buscador{
+                text-align: center;
+            }
+            @font-face {
+                font-family: Gabriela;
+                src: url(Gabriela-Regular.ttf);
+            }
+            @font-face {
+                font-family: Inria Sans;
+                src: url(InriaSans-Regular.ttf);
+            }
+            @font-face {
+                font-family: Joan;
+                src: url(Joan-Regular.ttf);
+            }
+            h1{
+                font-family: Joan;
+            }
+            h2, h6{
+                font-family: Inria Sans;
+            }
+            #escuela{
+                text-align: left;
+                font-size: 30px;
+                font-family: Gabriela;
+            }
+            #barra_busqueda{
+                display: flex;
+                width: 80%;
+                text-align: center;
+                position: relative;
+                left: 10%;
+            }
+            #texto_busqueda{
+                float: center;
+                width: 80%;
+                font-size: 140%;
+            }
+            #img-lupa{
+                width: 40px;
+                height: 40px;
+                background-image: url('lupa.jpg');
+                background-size: cover;
+            }
+            .footer{
+                background-color:#475268;
+                color: #a6c7ca;
+                bottom: 0;
+                position: absolute;
+            }
+        </style>
     <body>
         <header>
-            <h1 id="escuela">Centro de Enseñanza Técnica Industrial</h1>
+            <h1 id="escuela" class="container-fluid p-5 titulo">Centro de Enseñanza Técnica Industrial</h1>
         </header>
-        <div id="papa">
-            <div id="buscador">
-                <h1>Mapa digital</h1>
-                <h2>Plantel colomos</h2>
+        <div id="papa" class="row p-5">
+            <div id="buscador" class="col-12 col-md-6">
+                <h2>Mapa digital</h2>
+                <h3>Plantel colomos</h3>
                 <div id="barra_busqueda">
                     <input id="texto_busqueda" type="text" name="ubicacion">
                     <button id="img-lupa"></button>
                 </div>
             </div>
-            <div id="mapa">
-                <h1>Mapa libre</h2>
-                <img src="mapa.png" id="img-mapa">
+            <div id="mapa" class="col-12 col-md-6">
+                <h2>Mapa libre</h2>
+                <img src="mapa.png" width="500px" class="img-fluid">
             </div>
         </div>
+        <footer>
+            <div class="container-fluid footer p-5">
+                <h6>Esta página no es una oficial del Centro de Enseñanza Técnica Industrial. Esta página tiene fines informativos</h6>
+            </div>
+        </footer>
     </body>
 </html>
