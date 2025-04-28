@@ -18,10 +18,26 @@
                 color: #a6c7ca;
                 bottom: 0;
                 position: fixed;
-
             }
-            .papa{
+            .img{
                 text-align: center;
+            }
+            h1{
+                font-family: Joan;
+            }
+            h2, h6{
+                font-family: Gabriela;
+            }
+            h3{
+                font-family: Inria Sans;
+            }
+            #mapalibre{
+                color: #a6c7ca;
+                font-family: Gabriela;
+            }
+            #buscador{
+                color: #8da9ac;
+                font-family: Gabriela;
             }
             @font-face {
                 font-family: Gabriela;
@@ -35,23 +51,26 @@
                 font-family: Joan;
                 src: url(Joan-Regular.ttf);
             }
-            h1{
-                font-family: Joan;
-            }
-            h2, h6{
-                font-family: Gabriela;
-            }
-            h3{
-                font-family: Inria Sans;
-            }
-            
         </style>
     </head>
     <body>
-        <header>
-            <h1 id="escuela" class="container-fluid p-5 titulo">Centro de Enseñanza Técnica Industrial</h1>
-        </header>
-        <div class="row papa p-5">
+        <div class="container-fluid p-4 titulo">
+            <nav class="navbar navbar-expand-sm">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Edificio.html">
+                            <h1 id="mapalibre">Edificio F</h1>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <h1 id="buscador">Buscador</h1>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row p-5">
             <div class="col-12 col-md-6 img">
                 <img src="EdificioF.png" width="300px" class="img-fluid">
             </div>
@@ -65,7 +84,7 @@
             </div>
         </div>
         <footer>
-            <div class="container-fluid footer p-5">
+            <div class="container-fluid footer p-3">
                 <h6>Esta página no es una oficial del Centro de Enseñanza Técnica Industrial. Esta página tiene fines informativos</h6>
             </div>
         </footer>
