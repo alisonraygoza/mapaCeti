@@ -83,7 +83,18 @@
                 <h3>Plantel colomos</h3>
                 <div id="barra_busqueda">
                     <input id="texto_busqueda" type="text" name="ubicacion">
-                    <button id="img-lupa"></button>
+                    <button id="img-lupa" onclick="cambiarTamano()"></button>
+                    <script>
+                        var boton = document.getElementById("img-lupa");
+                        function cambiarTamano(){
+                            boton.style.width = "35px";
+                            boton.style.height = "35px";
+                            setTimeout(function() {
+                                boton.style.width = "40px";
+                                boton.style.height = "40px";
+                            }, 100);
+                        }
+                    </script>
                 </div>
             </div>
             <div class="col-12 col-md-6">
