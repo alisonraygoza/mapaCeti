@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('./db');
+const db = require('./db.js');
 const path = require('path');
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
@@ -18,7 +18,7 @@ app.post('/login', (req, res) =>{
     });
 });
 
-app.post('/insertar', (req, res) =>{
+app.post('/insert', (req, res) =>{
     const {usuario, contrasena} = req.body;
     const Verificar = 'SELECT * FROM usuario WHERE nombre = ?';
     db.query(Verificar, [nombre], (err2, resultados)=>{
