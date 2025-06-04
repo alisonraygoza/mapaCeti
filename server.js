@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('./mapaweb');
+const db = require('./db');
 const path = require('path');
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
