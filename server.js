@@ -2,18 +2,21 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('./db.js');
 const path = require('path');
+
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
+
 app.post('/login', (req, res) =>{
-    const {nombre, contrasena} = req.body;
+    const {usuario, contrasena} = req.body;
     const sql = 'SELECT * FROM usuario WHERE nombre = ? AND contrasena = ?';
-    db.query(sql, [nombre, contrasena], (err, resultados)=>{
+    db.query(sql, [usuario, contrasena], (err, resultados)=>{
         if(err) throw err;
         if(resultados.length > 0){
-            res.send('Incio de sesion existoso');
+            res.redirect('index.html');
+            //alert('Inicio de sesión exitoso');
         }else{
-            res.send('Credenciales incorrectas');
+            //alert('Credenciales incorrectas');
         }
     });
 });
@@ -21,16 +24,21 @@ app.post('/login', (req, res) =>{
 app.post('/insert', (req, res) =>{
     const {usuario, contrasena} = req.body;
     const Verificar = 'SELECT * FROM usuario WHERE nombre = ?';
-    db.query(Verificar, [nombre], (err2, resultados)=>{
+    db.query(Verificar, [usuario], (err2, resultados)=>{
         if(err2) throw err2;
 
         if(resultados.length > 0){
-            res.send('Usuario ya existente');
+            //alert('Usuario ya existente');
         }else{
             const insertar = 'INSERT INTO usuario (nombre, contrasena) VALUES (?, ?)';
-            db.query(insertar, [nombre, contrasena], (err3, resultados)=>{
+            db.query(insertar, [usuario, contrasena], (err3, resultados)=>{
             if(err3) throw err3;
-            res.send('Usuario registrado con éxito');
+            res.send(`
+                <script>
+                    alert("Registro exitoso");
+                    window.location.href = "/index.html";
+                </script>
+                `);
             });
         }
     });
