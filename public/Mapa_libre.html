@@ -25,7 +25,7 @@
                 font-family: Gabriela;
             }
            #mapa{
-            width: 70%;
+            width: auto;
             height: auto;
             text-align: center;
            }
@@ -50,6 +50,74 @@
                 font-family: Joan;
                 src: url(Joan-Regular.ttf);
             }
+            .invisible-button {
+                position: absolute;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+            }
+            #edifA{
+                width: 12%;
+                height: 9%;
+            }
+            #edifB{
+                width: 6%;
+                height: 43%;
+            }
+            #edifC{
+                width: 9%;
+                height: 14%;
+            }
+            #edifD{
+                width: 27%;
+                height: 17%;
+            }
+            #edifE{
+                width: 13%;
+                height: 25%;
+            }
+            #edifF{
+                width: 11%;
+                height: 38%;
+            }
+            #edifG{
+                width: 3%;
+                height: 20.5%;
+            }
+            #edifH{
+                width: 3.7%;
+                height: 13%;
+            }
+            #edifI{
+                width: 7.7%;
+                height: 5.5%;
+            }
+            #edifJ{
+                width: 10%;
+                height: 23%;
+            }
+            #edifK{
+                width: 2%;
+                height: 4%;
+            }
+            #edifL{
+                width: 12%;
+                height: 9%;
+            }
+            #edifO{
+                width: 9.5%;
+                height: 9.5%;
+            }
+            #edifP{
+                width: 4%;
+                height: 7%;
+            }
+            #edifR{
+                width: 3%;
+                height: 4.5%;
+            }
+            
         </style>
     </head>
     <body>
@@ -69,9 +137,25 @@
                 </ul>
             </nav>
         </div>
-           <div class="container my-5">
-                <img src="mapa.png" class="img-fluid" id="mapa">
-            </div>     
+           <div class="container my-5 position-relative" style="max-width: 800px;">
+            <img src="mapa.png" class="img-fluid" id="mapa">
+            <button onclick="alert('Edificio A')" style="top: 70%; left: 74%;" id="edifA" class="invisible-button"></button>
+            <button onclick="alert('Edificio B')" style="top: 40%; left: 65%;" id="edifB" class="invisible-button"></button>
+            <button onclick="alert('Edificio C')" style="top: 64%; left: 56%;" id="edifC" class="invisible-button"></button>
+            <button onclick="alert('Edificio D')" style="top: 19%; left: 51.6%;" id="edifD" class="invisible-button"></button>
+            <button onclick="alert('Edificio E')" style="top: 11%; left: 25.5%;" id="edifE" class="invisible-button"></button>
+            <button onclick="alert('Edificio F')" style="top: 42%; left: 38%;" id="edifF" class="invisible-button"></button>
+            <button onclick="alert('Edificio G')" style="top: 39%; left: 30.8%;" id="edifG" class="invisible-button"></button>
+            <button onclick="alert('Edificio H')" style="top: 43%; left: 22%;" id="edifH" class="invisible-button"></button>
+            <button onclick="alert('Edificio I')" style="top: 13%; left: 10%;" id="edifI" class="invisible-button"></button>
+            <button onclick="alert('Edificio J')" style="top: 61%; left: 21.5%;" id="edifJ" class="invisible-button"></button>
+            <button onclick="alert('Edificio K')" style="top: 10.5%; left: 40%;" id="edifK" class="invisible-button"></button>
+            <button onclick="alert('Edificio L')" style="top: 4.5%; left: 48.7%;" id="edifL" class="invisible-button"></button>
+            <button onclick="alert('Edificio O')" style="top: 4%; left: 63.5%;" id="edifO" class="invisible-button"></button>
+            <button onclick="alert('Edificio P')" style="top: 7.5%; left: 78%;" id="edifP" class="invisible-button"></button>
+            <button onclick="alert('Edificio R')" style="top: 85.5%; left: 65%;" id="edifR" class="invisible-button"></button>
+        </div> 
+                        
         <div class="container-fluid footer p-3">
             <h6>Esta página no es una oficial del Centro de Enseñanza Técnica Industrial. Esta página tiene fines informativos</h6>
         </div>
